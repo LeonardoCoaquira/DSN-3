@@ -11,7 +11,7 @@ from flask import Flask
 from flask_cors import CORS  # Importa la extensión CORS
 
 app = Flask(__name__)
-CORS(app)  # Habilita CORS para toda la aplicación
+CORS(app, resources={r"/*": {"origins": "http://localhost:80"}})  # Reemplaza con la URL de tu aplicación React en producción
 
 # Resto de tu código Flask
 
